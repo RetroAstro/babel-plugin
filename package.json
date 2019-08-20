@@ -11,6 +11,8 @@
     "@babel/cli": "^7.5.5",
     "@babel/core": "^7.5.5",
     "@babel/parser": "^7.5.5",
-    "@babel/traverse": "^7.5.5"
+    "@babel/preset-env": "^7.5.5",
+    "@babel/traverse": "^7.5.5",
+    "uglify-js": "^3.6.0"
   }
 }

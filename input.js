@@ -1,10 +1,9 @@
-function foo() {
-  console.log(123)
-  return bar()
+var bar = () => {
+  console.log(2333)
 }
 
-function bar() {
-  console.log(456)
+function foo() {
+  console.log(123)
   return baz()
 }
 
