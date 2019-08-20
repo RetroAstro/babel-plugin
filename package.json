@@ -2,8 +2,9 @@
   "name": "babel-plugin",
   "version": "1.0.0",
   "scripts": {
-    "start": "npm run transform && npm run traverse",
+    "start": "npm run transform && npm run minify && npm run traverse",
     "transform": "babel input.js -o output.js",
+    "minify": "uglifyjs output.js -o output.js --compress --source-map 'content=inline'",
     "traverse": "node lib/traverse.js"
   },
   "author": "RetroAstro",
@@ -14,6 +15,7 @@
     "@babel/parser": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
     "@babel/traverse": "^7.5.5",
+    "sorcery": "^0.10.0",
     "uglify-js": "^3.6.0"
   }
 }
