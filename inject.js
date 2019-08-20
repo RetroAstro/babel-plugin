@@ -1,16 +1,16 @@
 var key = 0
-var result = {}
+var data = {}
 
 var time = {
   start(uid) {
     var startTime = new Date().getTime()
-    result[uid] = { startTime }
+    data[uid] = { startTime }
     return uid
   },
   end(_uid) {
-    if (result[_uid]) {
+    if (data[_uid]) {
       var endTime = new Date().getTime()
-      result[_uid] = { ...result[_uid], endTime }
+      data[_uid] = { ...data[_uid], endTime }
     }
   }
 }

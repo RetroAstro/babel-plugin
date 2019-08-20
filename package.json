@@ -2,12 +2,15 @@
   "name": "babel-plugin",
   "version": "1.0.0",
   "scripts": {
-    "start": "babel input.js -o output.js"
+    "transform": "babel input.js -o output.js",
+    "traverse": "node traverse.js"
   },
   "author": "RetroAstro",
   "license": "MIT",
   "dependencies": {
     "@babel/cli": "^7.5.5",
-    "@babel/core": "^7.5.5"
+    "@babel/core": "^7.5.5",
+    "@babel/parser": "^7.5.5",
+    "@babel/traverse": "^7.5.5"
   }
 }
