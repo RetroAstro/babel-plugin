@@ -1,5 +1,6 @@
 // 先执行 plugin , 再执行 preset
 {
-  "presets": ["@babel/preset-env"],
-  "plugins": ["./plugin"]
+  "sourceMaps": "inline",
+  "plugins": ["./lib/plugin"],
+  "presets": ["@babel/preset-env"]
 }

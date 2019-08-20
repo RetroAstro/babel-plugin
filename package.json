@@ -2,8 +2,9 @@
   "name": "babel-plugin",
   "version": "1.0.0",
   "scripts": {
+    "start": "npm run transform && npm run traverse",
     "transform": "babel input.js -o output.js",
-    "traverse": "node traverse.js"
+    "traverse": "node lib/traverse.js"
   },
   "author": "RetroAstro",
   "license": "MIT",
