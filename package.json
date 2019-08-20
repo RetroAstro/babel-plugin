@@ -4,7 +4,7 @@
   "scripts": {
     "start": "npm run transform && npm run minify && npm run traverse",
     "transform": "babel input.js -o output.js",
-    "minify": "uglifyjs output.js -o output.js --compress --source-map 'content=inline, url=inline'",
+    "minify": "uglifyjs output.js -o output.min.js --compress --source-map 'content=inline, url=inline'",
     "traverse": "node lib/traverse.js"
   },
   "author": "RetroAstro",
