@@ -6,6 +6,20 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>babel plugin</title>
 </head>
-<body></body>
+<body>
+  <button onclick="handleClick()">导出数据</button>
+</body>
+<script src="./lib/time.js"></script>
 <script src="./output.min.js"></script>
+<script>
+var ws = new WebSocket('ws://localhost:8080')
+
+ws.onmessage = function({ data }) {
+  console.log(JSON.parse(data))
+}
+
+function handleClick() {
+  ws.send(JSON.stringify({ timeData: data }))
+}
+</script>
 </html>
