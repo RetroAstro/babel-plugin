@@ -13,3 +13,7 @@ function baz() {
 }
 
 foo()
+
+var test = new Promise(() => {
+  console.log(2333)
+})
