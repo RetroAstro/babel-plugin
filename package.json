@@ -2,9 +2,10 @@
   "name": "babel-plugin",
   "version": "1.0.0",
   "scripts": {
-    "start": "npm run transform && npm run minify && npm run traverse",
+    "start": "npm run transform && npm run minify && npm run flatten && npm run traverse",
     "transform": "babel input.js -o output.js",
-    "minify": "uglifyjs output.js -o output.min.js --compress --source-map 'content=inline, url=inline'",
+    "minify": "uglifyjs output.js -o output.min.js --compress --source-map 'url=inline'",
+    "flatten": "sorcery -d -i output.min.js",
     "traverse": "node lib/traverse.js"
   },
   "author": "RetroAstro",
