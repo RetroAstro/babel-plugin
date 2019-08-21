@@ -2,7 +2,8 @@
   "name": "babel-plugin",
   "version": "1.0.0",
   "scripts": {
-    "start": "npm run transform && npm run minify && npm run flatten && npm run traverse && npm run server",
+    "start": "npm run compile && npm run transform && npm run minify && npm run flatten && npm run traverse && npm run server",
+    "compile": "tsc input.ts --inlineSourceMap",
     "transform": "babel input.js -o output.js",
     "minify": "uglifyjs output.js -o output.min.js --compress --source-map 'url=inline'",
     "flatten": "sorcery -d -i output.min.js",
@@ -18,6 +19,7 @@
     "@babel/preset-env": "^7.5.5",
     "@babel/traverse": "^7.5.5",
     "sorcery": "^0.10.0",
+    "typescript": "^3.5.3",
     "uglify-js": "^3.6.0",
     "ws": "^7.1.2"
   }
