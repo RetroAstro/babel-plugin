@@ -4,7 +4,7 @@
   "scripts": {
     "start": "npm run compile && npm run transform && npm run minify && npm run flatten && npm run traverse && npm run server",
     "compile": "tsc input.ts --inlineSourceMap",
-    "transform": "babel input.js -o output.js",
+    "transform": "node lib/babel.js",
     "minify": "uglifyjs output.js -o output.min.js --compress --source-map 'url=inline'",
     "flatten": "sorcery -d -i output.min.js",
     "traverse": "node lib/traverse.js",
@@ -13,7 +13,6 @@
   "author": "RetroAstro",
   "license": "MIT",
   "dependencies": {
-    "@babel/cli": "^7.5.5",
     "@babel/core": "^7.5.5",
     "@babel/parser": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
